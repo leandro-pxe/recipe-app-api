@@ -23,10 +23,12 @@ class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
 
 
 class TagViewSet(BaseRecipeAttrViewSet):
+    """Manage tags in the database"""
     queryset = Tag.objects.all()
     serializer_class = serializers.TagSerializer
 
 
 class IngredientViewSet(BaseRecipeAttrViewSet):
+    """Manage ingredients in the database"""
     queryset = Ingredient.objects.all()
     serializer_class = serializers.IngredientSerializer
