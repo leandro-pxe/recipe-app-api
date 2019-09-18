@@ -8,8 +8,8 @@ from . import serializers
 
 # TODO learn more about viewset and mixins
 class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
-                 mixins.ListModelMixin,
-                 mixins.CreateModelMixin):
+                            mixins.ListModelMixin,
+                            mixins.CreateModelMixin):
     """Base viewset for user owned recipe attributes"""
     authentication_classes = (TokenAuthentication, )
     permission_classes = (IsAuthenticated, )
